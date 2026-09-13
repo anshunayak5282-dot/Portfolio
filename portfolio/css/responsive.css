@@ -1,0 +1,240 @@
+/* =========================================================
+   ANSHUMAN — Portfolio
+   responsive.css — breakpoints: 1440 / 1024 / 768 / 480 / 375
+   ========================================================= */
+
+/* -------------------- ≤1440px : large laptop -------------------- */
+@media (max-width: 1440px) {
+  :root {
+    --max-width: 1080px;
+  }
+}
+
+/* -------------------- ≤1024px : tablet / small laptop -------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --space-2xl: 4.5rem;
+    --space-3xl: 6rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta .btn-outline {
+    display: inline-flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .about-text p {
+    margin-inline: auto;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-groups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dash-panel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* Hamburger + mobile menu hidden by default above 1024px */
+@media (min-width: 1025px) {
+  .hamburger,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* -------------------- ≤768px : tablet portrait -------------------- */
+@media (max-width: 768px) {
+  section {
+    padding-block: var(--space-xl);
+  }
+
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .skills-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .project-actions {
+    flex-wrap: wrap;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .ai-panel {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* -------------------- ≤480px : mobile -------------------- */
+@media (max-width: 480px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .badge {
+    font-size: 0.68rem;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.01em;
+  }
+
+  .about-visual {
+    max-width: 260px;
+  }
+
+  .float-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .float-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .ai-body {
+    min-height: 180px;
+  }
+
+  .ai-input-row {
+    flex-wrap: nowrap;
+  }
+
+  .ai-send span {
+    display: none;
+  }
+
+  .contact-info h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .social-links a {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* -------------------- ≤375px : small mobile -------------------- */
+@media (max-width: 375px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    padding-left: 48px;
+  }
+
+  .timeline-marker {
+    width: 34px;
+    height: 34px;
+  }
+
+  .timeline-track {
+    left: 16px;
+  }
+}
+
+/* -------------------- Touch-friendly targets -------------------- */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .social-links a,
+  .nav-links a,
+  .skill-pills li,
+  .ai-suggestions button,
+  .back-to-top {
+    min-height: 44px;
+  }
+
+  /* No custom cursor on touch devices */
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+}
